@@ -117,7 +117,8 @@ body {
     background-color: var(--clr-neutral);
     transition: all 0.5s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       color: (var(--clr-neutral));
       background-color: var(--clr-secondary);
     }
@@ -235,6 +236,16 @@ body {
     color: var(--clr-neutral);
     display: block;
     margin-inline: auto;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--clr-secondary);
+    }
+
+    &:hover > .svg-inline--fa,
+    &:focus-visible > .svg-inline--fa {
+      border-color: var(--clr-secondary);
+    }
 
     > .svg-inline--fa {
       padding: 0.5em;
